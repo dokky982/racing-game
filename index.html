@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="hud">
+            <div id="score">Score: <span id="scoreValue">0</span></div>
+            <div id="speed">Speed: <span id="speedValue">0</span> km/h</div>
+            <div id="level">Level: <span id="levelValue">1</span></div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div id="gameOverScreen" class="hidden">
+            <div class="gameOverContent">
+                <h1>Game Over!</h1>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <p>Level Reached: <span id="finalLevel">1</span></p>
+                <button onclick="restartGame()">Play Again</button>
+            </div>
+        </div>
+        <div id="startScreen">
+            <div class="startContent">
+                <h1>Racing Game</h1>
+                <p>Use Arrow Keys or WASD to control your car</p>
+                <p>Avoid obstacles and collect power-ups!</p>
+                <button onclick="startGame()">Start Game</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
